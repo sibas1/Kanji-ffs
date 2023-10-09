@@ -1,0 +1,10 @@
+.box1 {
+    background-color: rgba(0, 255, 255, 0);
+    border-top: 3px rgba(62, 60, 60, 0.424) solid;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5em;
+}
+.titulo{
+    font-size: 1em;
+}

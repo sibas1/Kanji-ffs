@@ -1,0 +1,11 @@
+body {
+  background-image: url(./assets/13756389_5297135.jpg);
+  padding: 0; 
+  margin: 0;
+  min-height: 100vh;
+}
+#root{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 3em;
+}

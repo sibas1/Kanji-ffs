@@ -1,0 +1,65 @@
+.conteiner{
+    color: rgb(24, 25, 24);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 0.3em solid rgb(0, 0, 0);
+    border-left: .1em solid rgb(0, 0, 0); 
+    border-right: .1em solid rgb(0, 0, 0);
+    border-radius: 0.5em ;
+    border-top: .1em solid rgb(0, 0, 0);;
+    margin: 1em;
+    padding: .5em;
+    width: 3em;
+    box-shadow: 0.2em .1em gray;
+    font-size: 1.5em;
+}
+.conteiner:hover{
+
+    transform: rotate(5deg)
+}
+.conteiner2{
+    position: relative;
+}
+.desplegable{
+    border: 0.2em black solid;
+    color: white   ;
+    background-color: rgba(110, 110, 110, 0.81);
+    position: absolute;
+    z-index: 100;
+    border-radius: 5em;
+    scale: 0.5;
+    padding: 1em;
+    top: -20%;
+    left: -50%;
+    visibility: hidden;
+    transition: all 200ms;
+    font-size: .3em;
+
+}
+#evento{
+    display: none;
+}
+#evento:checked ~ .desplegable {
+visibility: visible;
+top: 30%;
+left: 70%;
+border-radius: .1em;
+scale: 1;
+font-size: 1em;
+}
+.conteiner:hover ~ .desplegable{
+    z-index: +1000; 
+}
+
+.desplegable:hover {
+z-index: +1000;
+
+}
+#evento:checked~.desplegable audio{
+    scale: 1;
+}
+.desplegable audio{
+    scale: 0.2;
+}
