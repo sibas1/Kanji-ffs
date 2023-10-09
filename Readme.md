@@ -1,6 +1,18 @@
-Proyecto creado con diferentes heramientas como redux toolkit y react baken en mongoDB 
-Para probar 
-1.clonar proyecto de la rama main 
-2.npm instal en la raiz de el client y el src
-3.desde scr comando nom run dev y los mismo en client
-4.buscar en lso puertos y estaa hecho 
+<em> Kanji-ffs </em>
+
+ ![Badge en Desarollo](https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green)
+
+ ## Descripcion 
+
+_Proyecto para el estudio de kanjis y diversas funciones para mejorar la memoria de los mismos con ayudade busqueda y deversas infromaciond e los mismos._
+
+## tecnologias usadas 
+
+* Reatc.js
+* MongoDB 
+* Express
+* Redux (manjado desde redux toolkit)
+* Css puro
+
+## Autor ✒️
+* **Cesar Lopez** -  [sibas1](https://github.com/sibas1)
