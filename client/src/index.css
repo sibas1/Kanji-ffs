@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
 }
 #root{
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 3em;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
 }

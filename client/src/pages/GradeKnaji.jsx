@@ -40,7 +40,6 @@ function GradeKnaji() {
         {data ? data.map((e) => <Kanjisimple kanji={e.kanji}/>) :null}
         </div>
       </div>
-      <Footer></Footer>
       </>
   )
 }

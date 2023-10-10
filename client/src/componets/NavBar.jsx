@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 function NavBar() {
   return (
     <div className={style.nav}>
-          <Link to='/' className={style.title}>Kanjis</Link>
-        <ul>
+      <Link to='/' className={style.title}>Kanji FFS</Link>
+        <ul className={style.ul}>
               <li><Link to='/kanjifind' className={style.links}>Find Kanjis</Link> </li>
             <li> <Link to='/kanjigrade' className={style.links} > Kanji Grade</Link></li>
             <li> <Link to='/partica' className={style.links} > Partice</Link></li>

@@ -6,7 +6,10 @@ function Kanjisimple(props) {
   const[ tt,{ data, error, isLoading, isUninitialized }] = useLazyGetKanjiQuery()
   function handeldetalle(e) {
     console.log(e.target.outerText)
-    tt(e.target.outerText)
+    tt(e.target.outerText
+      
+      
+      )
     console.log(data)
     if (ver) {
       setVer(false)
@@ -19,7 +22,7 @@ function Kanjisimple(props) {
       </div>
       <input type='checkbox' checked={ver} id={style.evento}></input>
       {data ? (<div className={style.desplegable} >
-        <h3> hiragana :{data.kanji.kunyomi.hiragana} romaji :{data.kanji.kunyomi.romaji}</h3>
+        <h3>kunyomi :{data.kanji.kunyomi.hiragana}onyomi:{data.kanji.onyomi.katakana}</h3>
         <h3>meaning: {data.kanji.meaning.english}</h3>
         <h3>examples :</h3>
         <h3>{data.examples[0].japanese}</h3>

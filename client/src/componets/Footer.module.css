@@ -1,11 +1,25 @@
-.footer{
-   margin: 0;
-
-   position: absolute;   display: flex;
+.footer{  
    background-color: #333;
    color: aliceblue;
-   bottom: 0;
    width: 100%;
+   margin-top: auto;
+   
+}
+.icono{
+   display: flex;
+   flex-direction: column;
    align-items: center;
-   justify-self: center;
+}
+.contacto{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   width: 100%;
+   margin: 1em;
+}
+.a{
+   color: #fcfcfc;
+}
+.a:hover{
+   color: #e4acac;
 }

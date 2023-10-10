@@ -1,0 +1,19 @@
+.h1{
+    color: rgb(93, 87, 98); 
+}
+.h3{
+    color: rgb(39, 39, 39);
+    font-size: 2em;
+}
+.p{color: #1b1b1b;}
+.cotainer{
+padding: 2em;
+display: flex;
+flex-direction: row;
+}
+.elemento{
+    margin: 1em;
+}
+.h5{
+    font-size: 1em;
+}

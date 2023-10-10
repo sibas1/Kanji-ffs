@@ -14,6 +14,7 @@
     width: 3em;
     box-shadow: 0.2em .1em gray;
     font-size: 1.5em;
+    cursor: pointer;
 }
 .conteiner:hover{
 
