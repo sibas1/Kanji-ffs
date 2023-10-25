@@ -13,7 +13,16 @@ function FindKanji() {
   
   const [kanji, setKanji] = useState([]);
 
-  
+  function ahndelIntro  (e) {
+    if (e.code =="Enter"){
+      if ((e.target.elements.kanji.value != "") && (isNaN(e.target.elements.kanji.value))) {
+        setKanji([
+          ...kanji,
+          e.target.elements.kanji.value])
+      } 
+    }
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     if ((e.target.elements.kanji.value != "") && (isNaN(e.target.elements.kanji.value))) {
@@ -28,7 +37,7 @@ function FindKanji() {
       <div className={style.page}>
         <div className={style.kanjiF}>
           <form onSubmit={handleSubmit}>
-            <label className={style.label}>find kanji: <input className={style.inputfind} name="kanji" type="text" /></label><br />
+            <label className={style.label}>find kanji: <input onKeyDown={ahndelIntro} className={style.inputfind} name="kanji" type="text" /></label><br />
             <button className={style.button} type='submit'>buscar</button>
           </form>
         </div>

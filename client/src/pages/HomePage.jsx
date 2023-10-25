@@ -4,7 +4,8 @@ import style from './HomePage.module.css'
 
 function HomePage() {
 
-  return (<><h1 className={style.h1}>Kanji FFS</h1>
+  return (
+  <><h1 className={style.h1}>Kanji FFS</h1>
     <div className={style.cotainer}>
       <div className={style.elemento}>
       <h3 className={style.h3}>Estatus:</h3>
