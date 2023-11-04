@@ -4,7 +4,6 @@ import KanjiFindC from "../componets/KanjiFindC";
 import KanjiFindM from '../componets/KanjiFindM';
 import KanjiFindO from '../componets/KanjiFindO';
 import KanjiFindK from '../componets/KanjiFindK';
-import NavBar from '../componets/NavBar';
 
 
 

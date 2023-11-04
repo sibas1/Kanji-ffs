@@ -11,9 +11,9 @@ export const login = async (req, res) => {
         if(!coinside) return res.status(400).json({message: "datos incorrectos"})
        
        
-        const token = await tokenCreate({ id: userFind._id })
-        res.cookie('token', token)
-        console.log(token)
+        const token = await tokenCreate({ id: userFind._id, expires: 1 })
+        res.cookie('token', token, { secure: true, sameSite: 'Strict', httpOnly: true } )
+        console.log(token)  
         res.json({
             email: userFind.email,
             name: userFind.username,
@@ -25,12 +25,16 @@ export const login = async (req, res) => {
 };
 
 export const register =async (req , res) =>{
-    const { username, usereamil, password, email } =req.body
+    
+    const { username, password, email } =req.body
     try {
+        console.log(email)
+        const userFind = await User.findOne({ email })
+        console.log(userFind)
+        if (userFind) {return res.status(200).json({ message: "email ya resgistardo" })} 
         const passhash=await bcrypt.hash(password,10)
         const newUser = new User({
             username,
-            usereamil,
             email,
             password : passhash,
         })

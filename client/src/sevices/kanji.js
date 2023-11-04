@@ -1,8 +1,12 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { useDispatch } from 'react-redux';
 
 export const kanjiAPi = createApi({
     reducerPath : 'kanjiApi',
-    baseQuery: fetchBaseQuery({ baseUrl:'http://localhost:4000'}),
+    baseQuery: fetchBaseQuery({ 
+        baseUrl:'http://localhost:4000',
+        credentials: 'include'
+    }),
     endpoints: (builder) =>({
         getKanji : builder.query({
             query: (kanji) =>  `/kanjiD?kanji=${kanji}`,
@@ -22,6 +26,20 @@ export const kanjiAPi = createApi({
         getKanjiK: builder.query({
             query: (kaji) => `/kanjiK?kanji=${kaji}`,
         }),
+        postAuRegister : builder.mutation({
+            query :(user) =>({
+                url : "/api/register",
+                method : "Post",
+                body : user,
+            })
+        }),
+        postAuLogin: builder.mutation({
+             query: (user) => ({
+                 url: "/api/login",
+                 method: "Post",
+                 body: user,
+            }),    
+         })
     })
 })
-export const { useGetKanjiKQuery, useGetKanjiOQuery, useGetKanjiMQuery,useLazyGetKanjiByGradeQuery, useGetKanjiQuery, useGetKanjiSQuery, useLazyGetKanjiQuery, useLazyGetKanjiMQuery } = kanjiAPi
+export const {usePostAuLoginMutation,usePostAuRegisterMutation, useGetKanjiKQuery, useGetKanjiOQuery, useGetKanjiMQuery,useLazyGetKanjiByGradeQuery, useGetKanjiQuery, useGetKanjiSQuery, useLazyGetKanjiQuery, useLazyGetKanjiMQuery } = kanjiAPi

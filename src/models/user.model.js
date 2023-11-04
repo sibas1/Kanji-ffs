@@ -6,11 +6,6 @@ const userSchema =new mongoose.Schema({
         required: true,
         trim: true,        
     },
-    usereamil: {
-        type: String,
-        required: true, 
-        unique : true,
-    },
     email: {
         type: String,
         required: true,
