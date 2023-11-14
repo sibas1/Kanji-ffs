@@ -13,7 +13,7 @@ function LoginPage() {
   let onSubmit = handleSubmit(async (values) => {
       try {
         const res = await loginUser(values).unwrap()
-        console.log(res)
+        console.log(res.headers.get('set-cookie'))
         dispatch(setToken(res))
         navigate("/")
       } catch (error) {
